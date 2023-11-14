@@ -95,6 +95,7 @@ export default function Home() {
                     className=" col-6 p-2   "
                     onClick={() => handleClick(dt._id)}
                   >
+                    {console.log("this is product -> ", dt)}
                     <div className="imageStyle ">
                       <img
                         className="w-100 d-flex"
@@ -102,6 +103,50 @@ export default function Home() {
                         src={dt.imageLink[0]}
                         alt=""
                       />
+                    </div>
+                    <div
+                      style={{
+                        textAlign: "center",
+                        alignItems: "center",
+                        padding: "10px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontFamily: "Ubuntu Mono",
+                          letterSpacing: "3px",
+                        }}
+                      >
+                        {dt.name}
+                      </div>
+                      <div style={{}}>
+                        <div className="mt-1">
+                          <span
+                            style={{
+                              fontFamily: "Ubuntu Mono",
+                              color: "#27de4b",
+                              fontSize: "15px",
+                            }}
+                          >
+                            SAR {dt && dt.price}
+                          </span>
+                          {dt.isProductOffer === true && (
+                            <span
+                              style={{
+                                paddingLeft: "10px",
+                                color: "red",
+                                fontSize: "12px",
+                              }}
+                            >
+                              <span>
+                                <del style={{ fontSize: "12px" }}>
+                                  SAR {dt && dt.offer}
+                                </del>
+                              </span>
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}

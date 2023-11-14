@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+
 import { useLocation, useParams } from "react-router-dom";
 import {
   EmailIcon,
@@ -46,48 +47,16 @@ export default function ProductPage() {
 
   return (
     <ProductPageStyle>
-      <Helmet>
-        <title>{product ? product.name : "Shoppers-Point 21"}</title>
-        <meta
-          name="description"
-          content={product ? product.description : "Online Shopping 22"}
-        />
+      <Helmet prioritizeSeoTags>
+        <title>Hello World</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
         <meta
           property="og:title"
-          content={product ? product.name : "Shoppers-Point 23"}
+          content={product ? product.name : "product name"}
         />
-        <meta
-          property="og:description"
-          content={product ? product.description : "Online Shopping  24"}
-        />
-
-        <meta
-          property="og:image"
-          content="https://i.ibb.co/VJ87qSz/amirali-mirhashemian-7hj3-Vwbd-I-o-unsplash.jpg"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
-        <meta
-          property="twitter:title"
-          content={product ? product.name : "Shoppers-Point 25"}
-        />
-        <meta
-          property="twitter:description"
-          content={product ? product.description : "Online Shopping 26"}
-        />
-        <meta
-          property="twitter:image"
-          itemProp="image"
-          content={
-            selectedProductImage !== ""
-              ? selectedProductImage
-              : "https://i.ibb.co/Hzmq1Fb/Untitled-Project-8.jpg"
-          }
-        />
-        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="og:description" content="Your Blog Post Title hear" />
+        <meta property="og:image" content="https://picsum.photos/200/300" />
       </Helmet>
-
       <div className="p-2">
         <div>
           <img
