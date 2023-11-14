@@ -95,7 +95,6 @@ export default function Home() {
                     className=" col-6 p-2   "
                     onClick={() => handleClick(dt._id)}
                   >
-                    {console.log("this is product -> ", dt)}
                     <div className="imageStyle ">
                       <img
                         className="w-100 d-flex"
