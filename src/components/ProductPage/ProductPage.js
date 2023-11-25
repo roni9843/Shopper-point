@@ -229,7 +229,7 @@ export default function ProductPage() {
           <h6>Description: </h6>
           <span
             style={{
-              fontSize: "14px",
+              fontSize: "15px",
               fontFamily: "poppins",
               color: "#838383",
             }}
