@@ -234,7 +234,7 @@ export default function ProductPage() {
               color: "#838383",
             }}
           >
-            Description : {product && product.description}
+            {product && product.description}
           </span>
         </div>
       </div>
